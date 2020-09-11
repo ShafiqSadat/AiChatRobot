@@ -43,11 +43,6 @@
             <version>LATEST</version>
         </dependency>
         <dependency>
-            <groupId>io.github.typhon0</groupId>
-            <artifactId>AnimateFX</artifactId>
-            <version>1.2.1</version>
-        </dependency>
-        <dependency>
             <groupId>org.xerial</groupId>
             <artifactId>sqlite-jdbc</artifactId>
             <version>3.32.3.2</version>
