@@ -21,6 +21,8 @@ public class DBConnection {
             while (rs.next()) {
                 return rs.getString("answer");
             }
+            con.close();
+            stmt.close();
         } catch (SQLException | ClassNotFoundException throwables) {
             throwables.printStackTrace();
         }
@@ -35,6 +37,8 @@ public class DBConnection {
             stmt.setString(2,answer);
             stmt.execute();
             System.out.println("Saved!!!");
+            con.close();
+            stmt.close();
         } catch (SQLException | ClassNotFoundException e) {
             e.printStackTrace();
         }
