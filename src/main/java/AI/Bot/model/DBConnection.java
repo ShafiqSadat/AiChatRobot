@@ -1,7 +1,5 @@
 package AI.Bot.model;
 
-import org.sqlite.core.DB;
-
 import java.sql.*;
 
 public class DBConnection {
