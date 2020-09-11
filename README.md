@@ -6,3 +6,12 @@ This bot uses an API to answer your questions (with support for more than 60 wor
 If you have internet, the robot will automatically check if you are connected to the internet or not. 
 If you are not connected, it will use its own internal database. . 
 The local database is empty and you have to teach your robot whatever language you want!
+
+# Pre loader
+![alt text](https://i.imgur.com/YeXzy2N.jpg)
+
+# Slider 
+![alt text](https://i.imgur.com/R1vyTbJ.jpg)
+
+# Main View
+![alt text](https://i.imgur.com/OeIIifQ.jpg)
