@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressIndicator?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="ancStart" prefHeight="670.0" prefWidth="1040.0" styleClass="anchor" stylesheets="@style/style.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="AI.Bot.controller.MainSceneController">
+    <AnchorPane fx:id="anc2" layoutX="105.0" layoutY="46.0" prefHeight="610.0" prefWidth="830.0" styleClass="anchorChild">
+        <AnchorPane layoutY="-1.0" opacity="0.51" prefHeight="99.0" prefWidth="695.0" styleClass="anchorChild2" AnchorPane.bottomAnchor="474.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="-1.0" />
+        <AnchorPane layoutY="511.0" prefHeight="99.0" prefWidth="695.0" styleClass="textfild" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+            <JFXTextField fx:id="messageTextField" alignment="CENTER" focusColor="#6d8ec6" labelFloat="true" layoutX="28.0" layoutY="10.0" onKeyReleased="#onMessageTextFieldKeyReleased" prefHeight="79.0" prefWidth="634.0" promptText="Type your message..." styleClass="field" unFocusColor="#78e08f" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="28.0" AnchorPane.rightAnchor="28.0" AnchorPane.topAnchor="10.0" />
+        </AnchorPane>
+        <ScrollPane fx:id="scrollPane" cacheShape="false" centerShape="false" layoutX="7.0" layoutY="138.0" prefHeight="371.0" prefWidth="811.0" scaleShape="false" style="-fx-background-color: transparent; -fx-background-radius: 300;">
+            <AnchorPane minHeight="0.0" minWidth="0.0">
+                <VBox fx:id="messages" spacing="10.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                </VBox>
+            </AnchorPane>
+        </ScrollPane>
+    </AnchorPane>
+    <ImageView fx:id="myImage" fitHeight="124.0" fitWidth="152.0" layoutX="128.0" layoutY="54.0" onMouseEntered="#onMouseOver" pickOnBounds="true" preserveRatio="true">
+        <Image url="@image/chat.png" />
+    </ImageView>
+   <ImageView fx:id="sendImage" fitHeight="43.0" fitWidth="54.0" layoutX="115.0" layoutY="444.0" pickOnBounds="true" preserveRatio="true" />
+   <JFXButton fx:id="sendButton" layoutX="112.0" layoutY="474.0" minWidth="52.0" onAction="#onSendButtonPressed" prefHeight="43.0" prefWidth="54.0" styleClass="sendBTN" text="Send" />
+   <Label fx:id="lblchat" layoutX="265.0" layoutY="91.0" text="Label" />
+   <Label fx:id="lblStatus" layoutX="271.0" layoutY="110.0" text="connecting..." textFill="#11ff00" />
+    <ProgressIndicator fx:id="loadingProgressIndicator" layoutX="319.0" layoutY="279.0" prefHeight="193.0" prefWidth="402.0" AnchorPane.bottomAnchor="198.0" AnchorPane.leftAnchor="319.0" AnchorPane.rightAnchor="319.0" AnchorPane.topAnchor="279.0" />
+   <Label fx:id="lblTyping" layoutX="283.0" layoutY="127.0" text="typing..." textFill="#00d9ff" />
+   <JFXButton fx:id="btnExit" layoutX="1000.0" layoutY="1.0" onAction="#btnExitClicked" prefHeight="17.0" prefWidth="36.0" style="-fx-background-color: red; -fx-background-radius: 50;" text="X" textFill="WHITE">
+      <font>
+         <Font name="System Bold" size="17.0" />
+      </font>
+   </JFXButton>
+   <JFXButton fx:id="btnhelp" layoutX="961.0" layoutY="1.0" onAction="#showHelp" prefHeight="30.0" prefWidth="36.0" style="-fx-background-color: red; -fx-background-radius: 50;" text="?" textFill="WHITE">
+      <font>
+         <Font name="System Bold" size="17.0" />
+      </font>
+   </JFXButton>
+   <StackPane fx:id="stackPane" focusTraversable="true" layoutX="218.0" layoutY="205.0" prefHeight="309.0" prefWidth="629.0" />
+</AnchorPane>

@@ -1,0 +1,50 @@
+/*.text-field{*/
+/*    -fx-background-radius: 10 0 0 10;*/
+/*}*/
+
+.anchor{
+    -fx-background-color: linear-gradient(to right, #91EAE4, #86a8e7, #7F7FD5);
+}
+.anchorChild{
+    -fx-background-color: rgba(0,0,0,0.4);
+    -fx-background-radius: 50;
+}
+.anchorChild2{
+    -fx-background-color: rgba(0,0,0,0.5);
+    -fx-background-radius: 50 50 0 0;
+}
+.textfild{
+    -fx-background-color: rgba(0, 0, 0, 0.2);
+    -fx-background-radius: 0 0 50 50;
+}
+.field{
+    -fx-prompt-text-fill: white;
+    -fx-text-fill: white;
+}
+.scroll-pane > .viewport {
+    -fx-background-color: transparent;
+    /*-fx-background-color: tomato;*/
+    /*-fx-background-radius: 10 0 0 10;*/
+    /*-fx-border-color: none;*/
+}
+
+.scroll-pane .corner{
+    -fx-background-color: #ff6347;
+}
+
+.scroll-bar:vertical .track{
+    -fx-background-color: linear-gradient(to right, #9e91ea, #86a8e7, #7F7FD5);
+}
+.scroll-bar:vertical .thumb{
+    -fx-background-color: #3c3b3b;
+}
+
+.scroll-bar:vertical *.increment-arrow .content,
+.scroll-bar:vertical *.decrement-arrow .content{
+    -fx-background-color: linear-gradient(to right, #9e91ea, #86a8e7, #7F7FD5);
+
+}
+
+.sendBTN{
+    -fx-background-color: linear-gradient(to right, #91EAE4, #86a8e7, #7F7FD5);
+}
