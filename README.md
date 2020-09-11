@@ -9,7 +9,7 @@ The local database is empty and you have to teach your robot whatever language y
 
 # How to use?
 This project is very easy to use,<br>
-download the project and then import the IDE<br>
+download the project and then import to the IDE<br>
 i suggest to use intelliJ IDEA 
 # Pre loader
 ![alt text](https://i.imgur.com/YeXzy2N.jpg)
