@@ -8,8 +8,8 @@ If you are not connected, it will use its own internal database. .
 The local database is empty and you have to teach your robot whatever language you want!
 
 # How to use?
-This project is very easy to use,
-download the project and then import the IDE 
+This project is very easy to use,<br>
+download the project and then import the IDE<br>
 i suggest to use intelliJ IDEA 
 # Pre loader
 ![alt text](https://i.imgur.com/YeXzy2N.jpg)
