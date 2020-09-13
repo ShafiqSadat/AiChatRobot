@@ -2,6 +2,7 @@ package AI.Bot.controller;
 
 import AI.Bot.model.DBConnection;
 import animatefx.animation.SlideInLeft;
+import javafx.application.Platform;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -37,19 +38,23 @@ public class IntroController implements Initializable {
         mediaPlayer.setVolume(0.1);
         mediaPlayer.play();
         mediaPlayer.setOnEndOfMedia(() -> {
-            try {
-                AnchorPane anc1;
-                if(isFirstTime()){
-                    anc1 = FXMLLoader.load(getClass().getClassLoader().getResource("SliderScene.fxml"));
-                    DBConnection.createDB();
-                }else{
-                    anc1 = FXMLLoader.load(getClass().getClassLoader().getResource("MainScene.fxml"));
-                }
-                ancStart.getChildren().setAll(anc1);
-                new SlideInLeft(anc1).play();
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
+            Thread thread = new Thread(()->{
+                Platform.runLater(()->{
+                    try {
+                        AnchorPane anc1;
+                        if(isFirstTime()){
+                            anc1 = FXMLLoader.load(getClass().getClassLoader().getResource("SliderScene.fxml"));
+                            DBConnection.createDB();
+                        }else{
+                            anc1 = FXMLLoader.load(getClass().getClassLoader().getResource("MainScene.fxml"));
+                        }
+                        ancStart.getChildren().setAll(anc1);
+                        new SlideInLeft(anc1).play();
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
+                });
+            });thread.start();
         });
 //        FadeTransition fade = new FadeTransition();
 //        //setting the duration for the Fade transition

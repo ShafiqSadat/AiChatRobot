@@ -220,7 +220,7 @@ public class MainSceneController implements Initializable {
                                 sendNotification();
                             }
                         },
-                        1000 * 60 * 5, 1000 * 60 * 5
+                        0, 1000 * 60 * 5
                 );
             });
         }

@@ -4,16 +4,16 @@ import java.sql.*;
 
 public class DBConnection {
 
-    public Connection getConnection() throws SQLException, ClassNotFoundException {
+    public Connection getConnection() throws SQLException {
 //        String path = getClass().getClassLoader().getResource("database.db").toString().replaceAll("file:/","");
         String connect = "jdbc:sqlite:./database.shafiq";
         return DriverManager.getConnection(connect, "", "");
     }
 
-    public static String resp(String quastion) {
+    public static String resp(String question) {
         try {
             Connection con = new DBConnection().getConnection();
-            String SQL = "SELECT answer FROM storage WHERE question='"+quastion+"'";
+            String SQL = "SELECT answer FROM storage WHERE question='"+question+"'";
             PreparedStatement stmt = con.prepareStatement(SQL);
             ResultSet rs = stmt.executeQuery();
             while (rs.next()) {
@@ -21,7 +21,7 @@ public class DBConnection {
             }
             con.close();
             stmt.close();
-        } catch (SQLException | ClassNotFoundException throwables) {
+        } catch (SQLException throwables) {
             throwables.printStackTrace();
         }
         return "";
@@ -37,7 +37,7 @@ public class DBConnection {
             System.out.println("Saved!!!");
             con.close();
             stmt.close();
-        } catch (SQLException | ClassNotFoundException e) {
+        } catch (SQLException e) {
             e.printStackTrace();
         }
     }
@@ -59,7 +59,7 @@ public class DBConnection {
         try(Connection con = new DBConnection().getConnection()){
             PreparedStatement statement = con.prepareStatement(sql);
             statement.execute();
-        }catch (SQLException | ClassNotFoundException e){
+        }catch (SQLException e){
             e.printStackTrace();
         }
     }

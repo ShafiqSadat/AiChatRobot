@@ -4,6 +4,7 @@ import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 public class Main extends Application{
@@ -21,9 +22,10 @@ public class Main extends Application{
             primaryStage.setY(event.getScreenY() - yOffset);
         });
         Scene scene = new Scene(root);
+        scene.setFill(Color.TRANSPARENT);
         scene.getStylesheets().addAll(getClass().getClassLoader().getResource("style/style.css").toString());
         primaryStage.setScene(scene);
-        primaryStage.initStyle(StageStyle.UNDECORATED);
+        primaryStage.initStyle(StageStyle.TRANSPARENT);
         primaryStage.setResizable(false);
         primaryStage.show();
         primaryStage.requestFocus();
