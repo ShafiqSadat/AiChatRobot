@@ -142,7 +142,7 @@ public class MainSceneController implements Initializable {
         String dbResponse = DBConnection.resp(text);
         if (dbResponse.equals("")){
             if(isConnected){
-            String res = $("curl http://shafiq.tech/simsimi/?text=" + text);
+            String res = $("curl http://shafiq.codes/simsimi/?text=" + text);
             JSONObject json = new JSONObject(res);
             String code = json.getString("id");
             this.resp = DecryptResponse.getResponse(code);
